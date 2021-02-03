@@ -1,1 +1,1 @@
-# eCommerce-OSF
+# eCommerce Frontend Project - OSF Digital
