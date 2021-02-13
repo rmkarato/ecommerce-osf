@@ -1,3 +1,5 @@
+import { COLORS }  from "../Constants";
+
 const GlobalStyle = () => (
 	<style jsx global>
 		{`
@@ -8,6 +10,8 @@ const GlobalStyle = () => (
 				overflow: auto;
 				font-family: Lato;
 				min-height: 100vh;
+				background: ${COLORS.background};
+				text: ${COLORS.textPrimary};
 			}
 		`}
 	</style>
