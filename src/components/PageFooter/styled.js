@@ -12,3 +12,16 @@ export const FooterWrapper = styled.div`
   justify-content: space-around;
   align-items: center;
 `;
+
+export const UnorderedList = styled.ul`
+  list-style-type: none;
+`;
+
+export const IconsWrapper = styled.div`
+  width: 119px;
+
+  display: flex;
+  justify-content: space-between;
+  align-self: center;
+`;
+
