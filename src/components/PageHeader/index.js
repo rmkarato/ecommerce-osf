@@ -130,7 +130,7 @@ const PageHeader = () => {
                         <MenuItem onClick={handleClickOutside}>Pets</MenuItem>
                         <MenuItem onClick={handleClickOutside}>Romantic</MenuItem>
                         <MenuItem onClick={handleClickOutside}>Sport</MenuItem>
-                      <MenuItem onClick={handleClickOutside}>Toys</MenuItem>
+                        <MenuItem onClick={handleClickOutside}>Toys</MenuItem>
                       </div>
 
                       <div>
