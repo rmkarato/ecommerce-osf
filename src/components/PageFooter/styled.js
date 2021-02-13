@@ -5,7 +5,6 @@ export const FooterWrapper = styled.div`
   height: 345px;
   margin-bottom: 0;
 
-  border: 1px solid black;
   font-size: 13px;
 
   display: flex;

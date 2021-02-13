@@ -4,12 +4,12 @@ import {
   Container
 } from "./styled";
 
-const CarrouselWrapper = () => {
+const PopularItemsArea = () => {
   return (
     <Container>
-      CarrouselWrapper
+      PopularItemsArea
     </Container>
   );
 };
 
-export default CarrouselWrapper;
+export default PopularItemsArea;
