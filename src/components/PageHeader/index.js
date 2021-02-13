@@ -1,6 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
 
-import Button from "@material-ui/core/Button";
 import ClickAwayListener from "@material-ui/core/ClickAwayListener";
 import Grow from "@material-ui/core/Grow";
 import Paper from "@material-ui/core/Paper";
@@ -14,24 +13,35 @@ import SearchIcon from "../../assets/images/header-search-information.png";
 import ProfileIcon from "../../assets/images/header-profile-user.png";
 import HeartIcon from "../../assets/images/header-heart.png";
 import BagIcon from "../../assets/images/header-bag.png";
+import DropdownImg from "../../assets/images/dropdown-img.png";
+import ArrowDropdownOpacity from "../../assets/images/arrow-dropdown.png";
 
 import {
   HeaderWrapper,
   LinkTo,
-  NavigationWrapper
+  NavigationWrapper,
+  ButtonMaterial,
+  ButtonMaterialOpacity,
+  IconsWrapper,
+  LanguageWrapper,
+  ArrowImage,
+  ArrowServices
 } from "./styled";
 
 const useStyles = makeStyles((theme) => ({
   root: {
     display: "flex",
-    flexDirection: "column",
-    flexWrap: "wrap",
+    alignItems: "center",
+    justifyContent: "center",
     height: "378px",
     width: "98vw",
     backgroundColor: "#262A32",
-    fontFamily: "Lato",
     color: "#FFF"
   },
+  paper: {
+    display: "flex",
+    flexWrap: "wrap",
+  }
 }));
 
 const PageHeader = () => {
@@ -65,14 +75,15 @@ const PageHeader = () => {
         </LinkTo>
         
         <NavigationWrapper>
-          <Button 
+          <ButtonMaterial 
             ref={anchorRef}
             aria-controls={openDropdown ? "menu-list-grow" : undefined}
             aria-haspopup="true"
             onClick={handleClickDropdown}
           >
             SERVICES
-          </Button>
+            <ArrowServices src={ArrowDropdownOpacity} alt="Arrow Dropdown" />
+          </ButtonMaterial>
           <Popper 
             open={openDropdown}
             anchorEl={anchorRef.current}
@@ -86,53 +97,99 @@ const PageHeader = () => {
               >
                 <Paper>
                   <ClickAwayListener onClickAway={handleClickOutside}>
-                    <MenuList autoFocusItem={openDropdown}>
-                      <MenuItem onClick={handleClickOutside}>PRODUCT CATEGORIES</MenuItem>
-                      <MenuItem onClick={handleClickOutside}>Accessories</MenuItem>
-                      <MenuItem onClick={handleClickOutside}>Alcohol</MenuItem>
-                      <MenuItem onClick={handleClickOutside}>Art</MenuItem>
-                      <MenuItem onClick={handleClickOutside}>Books</MenuItem>
-                      <MenuItem onClick={handleClickOutside}>Drink</MenuItem>
-                      <MenuItem onClick={handleClickOutside}>Electronics</MenuItem>
-                      <MenuItem onClick={handleClickOutside}>Flowers & Plants</MenuItem>
-                      <MenuItem onClick={handleClickOutside}>Food</MenuItem>
+                    <MenuList className={classes.paper} autoFocusItem={openDropdown}>
+                      <div>
+                        <MenuItem onClick={handleClickOutside}><b>PRODUCT CATEGORIES</b></MenuItem>
+                        <MenuItem onClick={handleClickOutside}>Accessories</MenuItem>
+                        <MenuItem onClick={handleClickOutside}>Alcohol</MenuItem>
+                        <MenuItem onClick={handleClickOutside}>Art</MenuItem>
+                        <MenuItem onClick={handleClickOutside}>Books</MenuItem>
+                        <MenuItem onClick={handleClickOutside}>Drink</MenuItem>
+                        <MenuItem onClick={handleClickOutside}>Electronics</MenuItem>
+                        <MenuItem onClick={handleClickOutside}>Flowers & Plants</MenuItem>
+                        <MenuItem onClick={handleClickOutside}>Food</MenuItem>
+                      </div>
+                      
+                      <div>
+                        <MenuItem onClick={handleClickOutside}>Gadgets</MenuItem>
+                        <MenuItem onClick={handleClickOutside}>Garden</MenuItem>
+                        <MenuItem onClick={handleClickOutside}>Grocery</MenuItem>
+                        <MenuItem onClick={handleClickOutside}>Home</MenuItem>
+                        <MenuItem onClick={handleClickOutside}>Jewelry</MenuItem>
+                        <MenuItem onClick={handleClickOutside}>Kids & Baby</MenuItem>
+                        <MenuItem onClick={handleClickOutside}>Men's Fashion</MenuItem>
+                        <MenuItem onClick={handleClickOutside}>Mobile</MenuItem>
+                      </div>
 
-                      <MenuItem onClick={handleClickOutside}>Gadgets</MenuItem>
-                      <MenuItem onClick={handleClickOutside}>Garden</MenuItem>
-                      <MenuItem onClick={handleClickOutside}>Grocery</MenuItem>
-                      <MenuItem onClick={handleClickOutside}>Home</MenuItem>
-                      <MenuItem onClick={handleClickOutside}>Jewelry</MenuItem>
-                      <MenuItem onClick={handleClickOutside}>Kids & Baby</MenuItem>
-                      <MenuItem onClick={handleClickOutside}>Men's Fashion</MenuItem>
-                      <MenuItem onClick={handleClickOutside}>Mobile</MenuItem>
+                      <div>
+                        <MenuItem onClick={handleClickOutside}>Motorcycles</MenuItem>
+                        <MenuItem onClick={handleClickOutside}>Movies</MenuItem>
+                        <MenuItem onClick={handleClickOutside}>Music</MenuItem>
+                        <MenuItem onClick={handleClickOutside}>Office</MenuItem>
+                        <MenuItem onClick={handleClickOutside}>Pets</MenuItem>
+                        <MenuItem onClick={handleClickOutside}>Romantic</MenuItem>
+                        <MenuItem onClick={handleClickOutside}>Sport</MenuItem>
+                      <MenuItem onClick={handleClickOutside}>Toys</MenuItem>
+                      </div>
+
+                      <div>
+                        <MenuItem onClick={handleClickOutside}><b>SALE</b></MenuItem>
+                        <MenuItem onClick={handleClickOutside}>Accessories</MenuItem>
+                        <MenuItem onClick={handleClickOutside}>Alcohol</MenuItem>
+                        <MenuItem onClick={handleClickOutside}>Art</MenuItem>
+                        <MenuItem onClick={handleClickOutside}>Books</MenuItem>
+                        <MenuItem onClick={handleClickOutside}>Drink</MenuItem>
+                        <MenuItem onClick={handleClickOutside}>Electronics</MenuItem>
+                        <MenuItem onClick={handleClickOutside}>Flowers & Plants</MenuItem>
+                        <MenuItem onClick={handleClickOutside}>Food</MenuItem>
+                      </div>
+
+                      <div>
+                        <img src={DropdownImg} alt="Dropdown Img" />
+                      </div>
                     </MenuList>
                   </ClickAwayListener>
                 </Paper>
               </Grow>
             )}
           </Popper>
-          <LinkTo to="/company">
-            COMPANY
-          </LinkTo>
-          <LinkTo to="/library">
-            LIBRARY
-          </LinkTo>
-          <LinkTo to="/contactus">
-            CONTACT US
-          </LinkTo>              
+
+          <ButtonMaterial>
+            <LinkTo to="/company">
+              COMPANY
+            </LinkTo>
+          </ButtonMaterial>
+          
+          <ButtonMaterial>
+            <LinkTo to="/library">
+              LIBRARY
+            </LinkTo>
+          </ButtonMaterial>
+          
+          <ButtonMaterial>
+            <LinkTo to="/contactus">
+              CONTACT US
+            </LinkTo>   
+          </ButtonMaterial>
         </NavigationWrapper>
 
-        <div>
-          <button>EN</button>
-          <button>$US</button>
-        </div>
+        <LanguageWrapper>
+          <ButtonMaterialOpacity>
+            EN
+            <ArrowImage src={ArrowDropdownOpacity} alt="Arrow Dropdown" />
+          </ButtonMaterialOpacity>
+          <ButtonMaterialOpacity>
+            $US
+            <ArrowImage src={ArrowDropdownOpacity} alt="Arrow Dropdown" />
+          </ButtonMaterialOpacity>
+        </LanguageWrapper>
         
-        <div>
+        <IconsWrapper>
           <img src={SearchIcon} alt="Search Icon" />
           <img src={ProfileIcon} alt="Profile Icon" />
           <img src={HeartIcon} alt="Heart Icon" />
           <img src={BagIcon} alt="Bag Icon" />
-        </div>
+        </IconsWrapper>
       </HeaderWrapper>
   );
 };
