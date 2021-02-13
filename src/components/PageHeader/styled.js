@@ -18,7 +18,7 @@ export const HeaderWrapper = styled.div`
 export const LinkTo = styled(Link)`
   text-decoration: none;
 
-  &:focus, &:hover, &:visited, &:link, &:active {
+    &:hover {
       text-decoration: none;
       color: ${COLORS.textPrimary};
     }
@@ -33,7 +33,13 @@ export const NavigationWrapper = styled.div`
 export const ButtonMaterial = styled(Button)`
   font-family: Lato;
   font-size: 14px; 
-  color: ${COLORS.textPrimary}
+  color: ${COLORS.textPrimary};
+
+  &:focus, &:hover, &:visited, &:link, &:active {
+    background: ${COLORS.backgroundMenu};
+    color: ${COLORS.textSecondary};
+    border-bottom: 3px solid ${COLORS.borderMenu};
+  }
 `;
 
 export const ButtonMaterialOpacity = styled(Button)`

@@ -34,9 +34,10 @@ const useStyles = makeStyles((theme) => ({
     alignItems: "center",
     justifyContent: "center",
     height: "378px",
-    width: "98vw",
+    width: "99.5vw",
+    marginTop: "20px",
     backgroundColor: "#262A32",
-    color: "#FFF"
+    color: "#FFF",
   },
   paper: {
     display: "flex",
@@ -185,10 +186,21 @@ const PageHeader = () => {
         </LanguageWrapper>
         
         <IconsWrapper>
-          <img src={SearchIcon} alt="Search Icon" />
-          <img src={ProfileIcon} alt="Profile Icon" />
-          <img src={HeartIcon} alt="Heart Icon" />
-          <img src={BagIcon} alt="Bag Icon" />
+          <LinkTo to="/search">
+            <img src={SearchIcon} alt="Search Icon" />
+          </LinkTo>
+
+          <LinkTo to="/profile">
+            <img src={ProfileIcon} alt="Profile Icon" />
+          </LinkTo>
+          
+          <LinkTo to="/like">
+            <img src={HeartIcon} alt="Heart Icon" />
+          </LinkTo>
+          
+          <LinkTo to="/cart">
+            <img src={BagIcon} alt="Bag Icon" />
+          </LinkTo>
         </IconsWrapper>
       </HeaderWrapper>
   );
