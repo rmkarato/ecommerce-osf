@@ -6,7 +6,7 @@ import CarouselArea from "../../components/Homepage/CarouselArea";
 import PopularItemsArea from "../../components/Homepage/PopularItemsArea";
 import BannerArea from "../../components/Homepage/BannerArea";
 import FeaturedProductsArea from "../../components/Homepage/FeaturedProductsArea";
-import PurposeArea from "../../components/Homepage/PurposeArea";
+import PurposeArea from "../../components/PurposeArea";
 
 const HomePage = () => {
   return (
