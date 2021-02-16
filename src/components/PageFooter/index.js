@@ -1,9 +1,9 @@
 import React from "react";
 
-import FbIcon from "../../assets/images/footer-fb-icon.png";
-import GoogleIcon from "../../assets/images/footer-google-icon.png";
-import TwitterIcon from "../../assets/images/footer-twitter-icon.png";
-import PinteresIcon from "../../assets/images/footer-pinterest-icon.png";
+import FbIcon from "../../assets/images/footer-fb-icon.svg";
+import GoogleIcon from "../../assets/images/footer-google-icon.svg";
+import TwitterIcon from "../../assets/images/footer-twitter-icon.svg";
+import PinteresIcon from "../../assets/images/footer-pinterest-icon.svg";
 
 import {
   FooterWrapper,

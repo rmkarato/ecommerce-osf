@@ -9,12 +9,12 @@ import MenuList from "@material-ui/core/MenuList";
 import { makeStyles } from "@material-ui/core/styles";
 
 import LogoHeader from "../../assets/images/header-logo.png";
-import SearchIcon from "../../assets/images/header-search-information.png";
-import ProfileIcon from "../../assets/images/header-profile-user.png";
-import HeartIcon from "../../assets/images/header-heart.png";
-import BagIcon from "../../assets/images/header-bag.png";
+import SearchIcon from "../../assets/images/header-search-information.svg";
+import ProfileIcon from "../../assets/images/header-profile-user.svg";
+import HeartIcon from "../../assets/images/header-heart.svg";
+import BagIcon from "../../assets/images/header-bag.svg";
 import DropdownImg from "../../assets/images/dropdown-img.png";
-import ArrowDropdownOpacity from "../../assets/images/arrow-dropdown.png";
+import ArrowDropdownOpacity from "../../assets/images/arrow-dropdown.svg";
 
 import {
   HeaderWrapper,
