@@ -2,12 +2,11 @@ import React from "react";
 
 import FbButton from "../../../assets/images/fb-follow-button.png";
 import SummerSalesBanner from "../../../assets/images/summer-sales-img.png";
-import CarouselBanner1 from "../../../assets/images/carousel-banner-1.png";
+import CarouselBanner from "../../CarouselBanner";
 
 import {
   Container,
   LeftWrapper,
-  TextWrapper,
   RightWrapper
 } from "./styled";
 
@@ -15,12 +14,7 @@ const CarouselArea = () => {
   return (
     <Container>
       <LeftWrapper>
-        <img src={CarouselBanner1} alt="Banner 1" />
-        <TextWrapper>
-          <p>Control and manage any device with cloud solutions</p>
-          <p>Improve business performance and the user experience with the right mix of IoT technology and processes</p>
-          <button>VIEW MORE</button>
-        </TextWrapper>
+        <CarouselBanner />
       </LeftWrapper>
       <RightWrapper>
         <img src={SummerSalesBanner} alt="Summer Sales Banner" />

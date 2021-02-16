@@ -19,16 +19,6 @@ export const LeftWrapper = styled.div`
     align-items: center;
 `;
 
-export const TextWrapper = styled.div`
-    position: absolute;
-    left: 60px;
-    
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-`;
-
 export const RightWrapper = styled.div`
     width: 270px;
     padding-left: 15px;
