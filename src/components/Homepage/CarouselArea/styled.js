@@ -8,3 +8,23 @@ export const Container = styled.div`
     justify-content: center;
     align-items: center;
 `;
+
+export const LeftWrapper = styled.div`
+    width: 870px;
+    padding-right: 15px;
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+`;
+
+export const RightWrapper = styled.div`
+    width: 270px;
+    padding-left: 15px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+`;
