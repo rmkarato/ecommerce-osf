@@ -10,6 +10,19 @@ export const Container = styled.div`
     color: ${COLORS.textSecondary};
 
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: space-evenly;
     align-items: center;
+`;
+
+export const LoadMoreButton = styled.button`
+    font-family: "Lato";
+    width: 265px;
+    height: 40px;
+    border: 2px solid #ffffff;
+    border-radius: 18px;
+    color: ${COLORS.textSecondary};
+    outline: none;
+    cursor: pointer;
+    background: transparent;
 `;
